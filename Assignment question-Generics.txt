@@ -1,0 +1,102 @@
+﻿1. What is the Input and Output Stream in Java?
+* In Java input and output are used for reading and writing data.
+It is a part of the Java Io Packages and is used to handle input and output streams.
+* Output Stream:
+It is used to write data into the destination it could be a file, array, etc.
+It is used for Serialization where the object is stored in the form of bytes in the destination.
+* Input Stream:
+	It is used to read data into the destination it could be a file, array, etc.
+It is used for deserialization where bytes from the destination or file are converted into readable objects .it's a reverse process of serialization.
+
+
+2. What are the methods of Outputstream?
+* 
+3. What is serialization in Java?
+* Serialization is used in Java for writing the data into a byte stream
+* Serialization is used for data safety 
+* For Serializing the object, we call writeObject() method of ObjectOutputStream class
+* Serialization process is platform independent meaning we can serialize an object on one platform and it can be deserialized on different platforms
+* To use the serialization process we need to implement the serializable interface for serializing the objects
+* Example 
+Class Student implements Serializable{
+	int id;
+	String name;}
+Public Student(int id, String name)
+{
+	this.id=id;
+	this.name=name;
+}
+* It is mainly used to travel the object state on the network.
+
+
+
+4. What is the Serializable interface in Java?
+* Serialization in Java is a marker interface that the classes must implement if they are to be serialized or deserialized.
+* It is present in the java io package
+* The marker interface does not have any method and fields, as the class that implements it does not need to implement methods.
+* We have to implement if we want the instance to be serialized or deserialized. 
+* Serialization is done by using objectOutputStream.
+
+
+
+5. What is deserialization in Java?
+* Deserialization in Java is the reverse process of Serialization
+Where a byte stream is converted back into the object form.
+* This process is used to recreate the Java object in memory from the byte stream.
+* To Use the Deserialization process we don't need to implement any interface to deserialize the object.
+* For Deserializing the objects, we call the readObject() method of ObjectInputStream class.
+* It's a platform independence, meaning the objects which are serialized in one platform can be deserialized in different platforms.
+
+
+
+6. How is serialization achieved in Java?
+* Serialization is used to convert the object states into the byte Stream.
+* To achieve Serialization we need to Implement the Serializable interface to serialize the object.
+* ObjectOutputStream class contains writeObject() method. Which stores the object in the destination in the byte stream.
+
+
+
+7. How is deserialization achieved in Java?
+* Deserialization is to convert the byte Stream into the Object state.
+* Deserialization is the reverse process of serialization
+* To achieve Deserialization we don't need to Implement the Deserializable interface to serialize the object. However, the 
+Class must implement the serializable at the time when it was serialized.
+* The readObject() method of ObjectInputStream in Java is used for Deserialization.
+
+
+
+8. How can you avoid certain member variables of class from getting Serialized?
+* In Java we can avoid certain member variables of a class from getting serialized by using Transient Keyword.
+* Transient Keyword:- Transient keyword is used when we want that certain variables not to be serialized we can declare it a Transient Keyword which will be stored as a byte Stream.
+* Example
+Class Student implements Serializable{
+	Int age;
+	String name;
+	Transient id;
+}
+
+
+
+9. What classes are available in the Java IO File Classes APP
+* Java IO File Classes are the part of java.io package. The main class is File. It has the methods to read, write, and manage files.
+* Some key Methods are Write(), read(), flush(), and close().
+* Example of File classes:
+* Public class main{
+Psvm(String args[]){
+	File file1= new File("pw.txt");
+}
+In this example, we create a file object that represents a file name pw.txt.
+
+
+
+1O. What is the Difference between Externalizable and Serialization Interface?
+* The key difference between the Externalizable and serialization interface is
+* Serializable interface: In Serialization the classes which implement Serializable, the responsibility of class instance serializing is taken by the JVM.
+* The serializable interface is a marker interface meaning it does not contain any methods.
+* If we add, remove, or change a field in our class, we don't have to change any serialization logic. 
+* It is the process of converting the state of an object into the byte form.
+* Externalizable interface: In Externalizable, the classes that implements Externalizable interface, the responsibility of class instance serializing or deserializing is taken by the programmer itself.
+* The Externalizable interface is used for custom serialization.
+* The externalizable interface defines two methods;
+writeExternal(ObjectOutput obj) and readExternal(ObjectInput in) 
+* If we add, remove, or change a field in a class, we have to maintain the logic itself.

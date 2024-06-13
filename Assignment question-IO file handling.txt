@@ -1,0 +1,98 @@
+﻿1. What are Generics in Java?
+Generics in Java allow you to create classes, interfaces, and methods and work with different datatypes while providing compile-time type safety. 
+Key features of generics  
+a)parameterized type:
+By using generics we can define parameterized types 
+Example:  ArrayList<integer> al=new ArrayList<>();
+As we define ArrayList it can store integers only now.
+b)type safety:
+Before generics, one could store any type of object using ArrayList 
+Which sometimes can cause a runtime error therefore after generics we can achieve type safety which allows us to define parameterized types and ensures typesafety by detecting errors at compile-time
+
+
+
+2. What are the benefits of using Generics in Java?
+benefits of generics  
+a)parameterized type:
+By using generics we can define parameterized types 
+Example:  ArrayList<integer> al=new ArrayList<>();
+As we define ArrayList it can store integers only now.
+b)type safety:
+Before generics, one could store any type of object using ArrayList 
+Which sometimes can cause a runtime error therefore after generics we can achieve type safety which allows us to define parameterized types and ensures type safety by detecting errors at compile-time
+c)Type-casting:- Without Generics we need to typecast the object 
+example suppose we store some string values in ArrayList  and if we want to retrieve the value, we need to type case it to a string.
+String s=(String) o.get(0);
+But by using Generics we don't need to typecast the values
+String s=o.get(0);
+
+
+
+
+3. What is a Generic Class in Java?
+Generics in Java allows us to create classes and work with different datatypes while providing compile-time typecasting 
+For example:
+ Class MyGen<T>{
+Private T obj;
+
+ Public add (T obj(){
+This.obj=obj;
+}
+Public T getobj (){
+Return obj;
+}
+}
+
+Public class main{
+Public static void main(String args[])
+{
+	MyGen<Integer> al1=new MyGen<Integer>(5);
+	Sopln("age:"+al1.getobj());
+	MyGen<String> al2 =new MyGen<String>("Sachin");
+Sopln("Name"+al1.getobj());
+
+}
+}
+
+
+
+
+4. What is a Type Parameter in Java Generics?
+a)The parameter is a placeholder for a specific datatypes
+Allow us to create classes or methods that can operate on various types without specifying the type 
+b)Type parameters are enclosed in angle brackets <T>whereT representing as type 
+
+
+
+5. What is a Generic Method in Java?
+Generics method is similar to generic classes which allows us to write code tha can operate on various types while providing typesafety 
+Generics method has its own type parameter(placeholder) that is specified when the method is called 
+Syntax of generics method 
+public<T> void methodname(){
+}
+
+
+
+
+6. What is the difference between Array List and ArrayList<T>?
+   ArrayList:
+1) ArrayList is an implementation of a list interface which is   a part of the collection framework
+2) ArrayList is created based on growing and resizeable array
+3) We can use it to store and manipulate the collection 
+of object
+4) example of ArrayList:
+ 1)ArrayList obj=new ArrayList();
+//for adding an element to the list
+Obj.add();
+// int size=(Integer)obj.get(0);
+ 2)Arraylist<T>
+ a)ArrayList<T> is a generic version of the ArrayList.
+   The type parameter <T> allows us to provide the data type of the element stored in the list.
+ b)for example:
+   ArrayList<Integer> al=new ArrayList<Integer>();
+   As in this example integer is the generics which we  specify the ArrayList that it can store integers only 
+d) It provides us with compile-time type safety
+Allows us to work with specific datatypes.
+	
+
+
