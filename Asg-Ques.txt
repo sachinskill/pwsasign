@@ -1,0 +1,36 @@
+
+1. Program to display current date and time in Java
+* check datatime.java file
+
+2. Write a program to convert a date to a string in the format "MMIddlyyyy".
+* check datetostring.java file
+3. What is the difference between collections and streams? Explain with an Example.
+* Collections:
+> Collections are a memory hierarchy frame that contains a set of interfaces and classes.
+> Collections are used to store, add, delete, retrieve, and manipulate the data.
+> The collection can be modified or reused.
+* Streams:
+> Streams are an API introduced in java8.
+Streams are sequences of objects and support various methods.
+> Streams are used to process a collection of objects.
+> Streams are not data structures and can not modified, they operate on existing data structures. Examples like arrays, collections
+4. What are enums in Java? explain with an example.
+* Enums were introduced in Java 1.5. Enums are used whenever we have a set of values or predefined named constants that we don't want to change.
+* It's a special type of class used to define a collection of constants. They provide a way to represent a fixed set of values that don't change throughout the process.
+* Example
+Public enum Coffeesize{
+	large,
+	medium,
+	small   	}
+5. What are in-built annotations in Java?
+* In-built annotations in Java are predefined annotations in Java language.
+That provides Metadata about the code to the compiler and the runtime Environment.
+* Here are the main in-built annotations in Java
+> @Override
+Helps to catch errors if the method doesn't actually override as intended.
+> @Depricated
+Marks a method or class as a deprecated means suggesting it should no longer be used.
+> @FuntionalInterface
+Indicates that the interface is intended to be functional interface (with a single abstract method)
+
+
