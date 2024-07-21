@@ -1,0 +1,53 @@
+
+1. What do you mean by Multithreading? Why is it important?
+* Improve efficiency: utilizes CPU resources better.
+* Save times: Allows parallel execution of tasks. Reduces overall processing time.
+* Improve responsiveness: allows Programs to remain interactive while performing a heavy task
+* Optimizes resources usage: Allows better for better management of resources.
+* In simple terms, multithreading helps programs work faster and smoother by doing multiple things at once.
+2. What are the benefits of using Multithreading?
+* Improve Responsiveness
+* Save times
+* Improve performance
+* Efficient resource uses
+* Faster execution
+3. What is Thread in Java?
+* In simple Thread is a process in Java. 
+* It executes a small portion of a program.
+* A thread can run independently and concurrently with other threads.
+* Each thread in the program has its own path of Execution.
+4. What are the two ways of implementing thread in Java?
+* There are two ways to implement a thread that is
+* 1) By Extending multiple thread classes.
+* 2)BY implementing a runnable interface.
+5. What's the difference between thread and process?
+* Process
+> Has its own memory space and resources
+> Heavier, more time-consuming to create and manage
+> Allocate resources by the operating system.
+* Thread
+> Threads share memory space and resources with other threads in the same process.
+> Lighter, quicker to create and switch between.
+> Uses resources to allocate to its parent process.
+6. How can we create daemon threads?
+* Daemon Threads are run in the Background of other threads
+* It provides services to the main thread 
+* Examples like Garbage Collectors, finalizers, signal dispatchers, etc.
+* Methods:-
+* A) public final void set Daemon(Boolean b)
+* B) public final Boolean is Daemon()
+* Program
+Class Example Extends Threads{
+ Public void run(){
+	Sysout(“child thread”);
+}
+Psvm(){
+Sysout(“MAIN THREAD”);
+Test t =new Test();
+t.setDaemon(true);
+t.start();
+}
+}
+7. What are the wait() and sleep() methods?
+* Wait() method is to make a thread wait for another thread to do something.
+* Sleep() method is to pause the thread execution for some duration
